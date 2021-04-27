@@ -1,13 +1,13 @@
 FROM python:3
 
 #Set via GITHUB_WORKSPACE environment variable
-# WORKDIR /github/home
+WORKDIR /app
 
 # Copy in the files from source control to the container
-COPY . /github/workspace
+COPY . /app
 
-# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 # ENV PYTHONPATH /app
-RUN chmod +x /github/workspace/app.py
+RUN chmod +x /app/app.py
 # CMD ["/app/app.py" ]
-ENTRYPOINT ["python" , "/github/workspace/app.py"]
+ENTRYPOINT ["python" , "/app/app.py"]
