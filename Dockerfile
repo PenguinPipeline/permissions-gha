@@ -6,7 +6,7 @@ FROM python:3
 # Copy in the files from source control to the container
 COPY . /github/workspace
 
-RUN pip install --no-cache-dir -r requirements.txt
+# RUN pip install --no-cache-dir -r requirements.txt
 # ENV PYTHONPATH /app
 RUN chmod +x /github/workspace/app.py
 # CMD ["/app/app.py" ]
