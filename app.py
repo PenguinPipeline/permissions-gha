@@ -6,9 +6,13 @@ import os
 def main():
     # my_input = os.environ["INPUT_MYINPUT"]
 
-    result = f"Permissions File: {os.environ['permissions_file_path']}--Reference File: {os.environ['restrictions_file_path']}"
+    # result = f"Permissions File: {os.environ['permissions_file_path']}--Reference File: {os.environ['restrictions_file_path']}"
 
-    print(f"::set-output name=result::{result}")
+    line = ""
+    with open(os.environ['permissions_file_path']) as f:
+        line = f.readline()
+    
+    print(f"::set-output name=result::{line}")
 
 
 if __name__ == "__main__":
