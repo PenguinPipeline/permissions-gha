@@ -9,4 +9,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 # ENV PYTHONPATH /app
 RUN chmod +x ./app.py
 # CMD ["/app/app.py" ]
-ENTRYPOINT ["python" , "./app.py"]
+ENTRYPOINT ["python" , "app.py"]
