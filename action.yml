@@ -8,7 +8,9 @@ inputs:
     description: "Folder where the resrictions"
     required: true
 outputs:
-  result:
+  lob:
+    description: "Result of the permissions"
+  trimis:
     description: "Result of the permissions"
 runs:
   using: "docker"
