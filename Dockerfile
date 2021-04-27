@@ -6,7 +6,9 @@ WORKDIR /app
 # Copy in the files from source control to the container
 COPY . /app
 
-RUN pip install --no-cache-dir -r requirements.txt
+# RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install pyyaml
+
 # ENV PYTHONPATH /app
 RUN chmod +x /app/app.py
 # CMD ["/app/app.py" ]
