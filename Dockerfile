@@ -6,7 +6,7 @@ WORKDIR /app
 # Copy in the files from source control to the container
 COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
-ENV PYTHONPATH /app
+# ENV PYTHONPATH /app
 RUN chmod +x /app/app.py
-CMD ["/app/app.py" ]
-# ENTRYPOINT ["/entrypoint.sh"]
+# CMD ["/app/app.py" ]
+ENTRYPOINT ["python" , "/app/app.py"]

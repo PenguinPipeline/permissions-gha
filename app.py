@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 # import requests  # noqa We are just importing this to prove the dependency installed correctly
 
