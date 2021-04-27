@@ -4,9 +4,10 @@ FROM python:3
 # WORKDIR /github/home
 
 # Copy in the files from source control to the container
-COPY . /github/home
+COPY . /github/workspace
+
 RUN pip install --no-cache-dir -r requirements.txt
 # ENV PYTHONPATH /app
-RUN chmod +x /github/home/app.py
+RUN chmod +x /github/workspace/app.py
 # CMD ["/app/app.py" ]
-ENTRYPOINT ["python" , "/github/home/app.py"]
+ENTRYPOINT ["python" , "/github/workspace/app.py"]
