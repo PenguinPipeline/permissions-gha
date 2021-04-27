@@ -1,0 +1,15 @@
+name: "Permissions Action"
+description: "Python action to set permissions on DB"
+inputs:
+  permissions_file_path:
+    description: "Path to the permissions YML file"
+    required: true
+  restrictions_file_path:
+    description: "Folder where the resrictions"
+    required: true
+outputs:
+  result:
+    description: "Result of the permissions"
+runs:
+  using: "docker"
+  image: "Dockerfile"
