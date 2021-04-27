@@ -6,7 +6,7 @@ import os
 def main():
     # my_input = os.environ["INPUT_MYINPUT"]
 
-    result = f"Permissions File: {os.environ['permissions_file_path']}\n Reference File: {os.environ['restrictions_file_path']}"
+    result = f"Permissions File: {os.environ['permissions_file_path']}--Reference File: {os.environ['restrictions_file_path']}"
 
     print(f"::set-output name=result::{result}")
 
