@@ -7,6 +7,6 @@ WORKDIR /app
 COPY . /app
 RUN pip install --no-cache-dir -r requirements.txt
 ENV PYTHONPATH /app
-
+RUN chmod +x /app/app.py
 CMD ["/app/app.py" ]
 # ENTRYPOINT ["/entrypoint.sh"]
